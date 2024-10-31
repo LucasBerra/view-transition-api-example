@@ -16,9 +16,9 @@ const StyledImgWrapper = styled(Link)<{ transitionName: string }>`
   position: relative;
   margin: 36px auto;
   display: block;
-  height: 600px;
+  height: 575px;
   width: 100%;
-  max-width: 600px;
+  max-width: 575px;
   view-transition-name: ${({ transitionName }) => transitionName};
 
   img {

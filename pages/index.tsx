@@ -37,7 +37,7 @@ const StyledImgWrapper = styled(Link)<{ transitionName: string }>`
   }
 
   ${LG_MIN_MEDIA_QUERY} {
-    height: 300px;
+    height: 275px;
   }
 `;
 
