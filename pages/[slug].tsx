@@ -50,9 +50,7 @@ export default function ImagePage({ pageImage }: Props) {
             <h1>{pageImage.name}:</h1>
             <StyledDescription>Click on the image to go back to the gallery:</StyledDescription>
 
-            <StyledImgWrapper
-              href='/'
-              transitionName={pageImage.name.toLowerCase().replaceAll(' ', '-').replaceAll("'", '')}>
+            <StyledImgWrapper href='/' transitionName={pageImage.slug}>
               <Image src={pageImage.image} alt={pageImage.name} fill />
             </StyledImgWrapper>
           </Container>

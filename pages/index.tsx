@@ -25,12 +25,11 @@ const StyledGrid = styled.div`
   }
 `;
 
-const StyledImgWrapper = styled(Link)<{ transitionName: string }>`
+const StyledImgWrapper = styled(Link)`
   height: 220px;
   width: 100%;
   position: relative;
   margin: 0 auto;
-  view-transition-name: ${({ transitionName }) => transitionName};
 
   img {
     object-fit: contain;
@@ -52,25 +51,22 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container>
-          <h1>View Transition API example</h1>
-          <StyledDescription>Click any image to see the view transition</StyledDescription>
+        <PageTransitionProvider>
+          <Container>
+            <h1>View Transition API example</h1>
+            <StyledDescription>Click any image to see the view transition</StyledDescription>
 
-          <PageTransitionProvider>
             <StyledGrid>
               {IMAGE_ARRAY.map(image => {
                 return (
-                  <StyledImgWrapper
-                    key={image.slug}
-                    href={`/${image.slug}`}
-                    transitionName={image.name.toLowerCase().replaceAll(' ', '-').replaceAll("'", '')}>
+                  <StyledImgWrapper key={image.slug} href={`/${image.slug}`}>
                     <Image src={image.image} alt={image.name} fill />
                   </StyledImgWrapper>
                 );
               })}
             </StyledGrid>
-          </PageTransitionProvider>
-        </Container>
+          </Container>
+        </PageTransitionProvider>
       </main>
     </>
   );

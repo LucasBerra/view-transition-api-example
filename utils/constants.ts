@@ -34,6 +34,6 @@ export const IMAGE_ARRAY = [
   {
     image: WontBreakTheBank,
     name: "Won't Break The Bank",
-    slug: "won't-break-the-bank",
+    slug: 'wont-break-the-bank',
   },
 ];
